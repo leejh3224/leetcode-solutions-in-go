@@ -14,10 +14,6 @@ func validMountainArray(A []int) bool {
 	n := len(A)
 	i := 0
 
-	if n < 3 {
-		return false
-	}
-
 	// climbing up from left side
 	for i+1 < n && A[i] < A[i+1] {
 		i++

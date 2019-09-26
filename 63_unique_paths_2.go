@@ -12,14 +12,14 @@ func uniquePathsWithObstacles(grid [][]int) int {
 	lenX := len(grid[0])
 	lenY := len(grid)
 
-	dp := make([][]int, lenX)
+	dp := make([][]int, lenY, lenY)
 	for i := range dp {
-		dp[i] = make([]int, lenY)
+		dp[i] = make([]int, lenX, lenX)
 	}
 	dp[0][0] = 1
 
-	for i := 0; i < lenX; i++ {
-		for j := 0; j < lenY; j++ {
+	for i := 0; i < lenY; i++ {
+		for j := 0; j < lenX; j++ {
 			if grid[i][j] == 1 {
 				dp[i][j] = 0
 			} else {
@@ -33,7 +33,7 @@ func uniquePathsWithObstacles(grid [][]int) int {
 		}
 	}
 
-	return dp[lenX-1][lenY-1]
+	return dp[lenY-1][lenX-1]
 }
 
 // Leetcode #63: Unique Paths II

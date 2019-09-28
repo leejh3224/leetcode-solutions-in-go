@@ -37,12 +37,11 @@ func lengthOfLIS(nums []int) int {
 	return dp[len(nums)-1]
 }
 
+// Leetcode #300: Longest Increasing Subsequence
+// https://leetcode.com/problems/longest-increasing-subsequence/
 func main() {
-	// var input = []int{
-	// 	10, 9, 2, 5, 3, 7, 101, 18,
-	// }
 	var input = []int{
-		-2, -1,
+		10, 9, 2, 5, 3, 7, 101, 18,
 	}
 
 	fmt.Printf("%v", lengthOfLIS(input))

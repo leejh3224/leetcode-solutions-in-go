@@ -51,6 +51,8 @@ func backtrack(ret *[][]int, visited *[]bool, perm *[]int, nums []int, depth *in
 	}
 }
 
+// Leetcode: #46: Permutations
+// https://leetcode.com/problems/permutations/
 func main() {
 	var input = []int{5, 4, 6, 2}
 	fmt.Printf("%v", permute(input))

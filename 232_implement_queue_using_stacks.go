@@ -65,6 +65,8 @@ func (this *MyQueue) Empty() bool {
 	return this.in.Empty() && this.out.Empty()
 }
 
+// Leetcode #232: Implement Queue using Stacks
+// https://leetcode.com/problems/implement-queue-using-stacks/
 func main() {
 	var q = Constructor()
 	q.Push(1)
